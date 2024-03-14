@@ -1,23 +1,33 @@
-# Automated Incident Response and Forensics Framework
+# AWS Labs' Automated DFIR Framework as modified by Mister Kilroy
+
+## Disclaimer
+This is a personal copy of AWS Labs' Automated Incident Response and Forensics Framework.  Per the general license as provided by Amazon, I am free to modify this code as necessary for my own purposes.  I may also, at my discretion, recommend updates and changes to the main repository maintained by AWS Labs.
 
 
-## Use Case
+## Professional Background
+I have been working in information technology and security for over twenty-five (25) years, and currently work as a Security Engineer for a major financial services company.  I have a background in digital forensics and Cloud computing, and since 2017 have been teaching at conferences in the United States on the same subjects.  I also have held at one point an AWS certification which has since expired.  Additional information about me may be found on my [LinkedIn](https://www.linkedin.com/in/KMHazelton) page.
 
-This use-case was developed for a customer in the automotive industry operating a large set of accounts. Their problems were:
-- Incident Response and Forensics was a manual process prone to mistakes
-- Time-consuming process with many steps 
-- Hard to perform by non-trained personnel 
 
-To address this we created the Automated Incident Response and Forensics framework. The framework aims to facilitate automated steps for incident response and forensics based on the [AWS Incident Response White Paper](https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/welcome.html). 
+## Original Use Case
+Per AWS Labs, the use-case was originally developed for a customer in the automotive industry who faced three major issues:
 
-## Goals
-The goal is to provide a set of processes enabled by Lambda functions as to: 
-- Provide an easy way to trigger the IR process with minimum knowledge
-- Provide an automated repeatable processes, alligned with the AWS IR White Paper
-- Provide segregation of accounts to operate the automation steps, store artifacts and create forensic environments 
+- The existing DFIR (Digital Forensics and Incident Response) process was manually performed, and prone to error,
+- The process itself was time-consuming with many steps
+- Non-trained personnel found the procedures difficult to perform
+
+The framework was then developed by the AWSLabs team as a result, which aims to facilitate and automate the DFIR process which is based on the AWS Incident Response White Paper](https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/welcome.html). The goals were straightforward:
+
+- Provide an easier mechanism to trigger the process with minimal knowledge
+- Make the automated processes repeatable and in alignment with the IR white paper as published by AWS
+- Allow for account segregation to run the automation scripts, create the required environment and have a place for artifact storage
 
 ## Limitations
-Note that this framework does not intend to generate artifacts which can be considered as electronic evidence, submissible in court.  
+AWS Labs indicated that the framework "does not intend to generate artifacts which can be considered as electronic evidence".  
+
+## Under the hood
+The processes use CloudFormation templates to create Lambda functions which in turn generate the resources needed for a digital forensic investigation.
+
+# Per AWS Labs:  
 
 ## Overview of the Framework
 
