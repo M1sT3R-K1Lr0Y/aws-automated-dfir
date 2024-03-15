@@ -27,6 +27,12 @@ AWS Labs indicated that the framework "does not intend to generate artifacts whi
 ## Under the hood
 The processes use CloudFormation templates to create Lambda functions which in turn generate the resources needed for a digital forensic investigation.
 
+## To Do:
+- Verify the `forensic-AnalysisVPCnS3Buckets.yaml` file is capturing S3 access logs from a compromised bucket and placing them in the Forensics S3 bucket
+- Modify the `forensic-MaintenanceVPCnEC2ImageBuilderPipeline.yaml` to use TSK/Autopsy in place of SIFT
+- Create a Windows-only Pipeline to automate the creation of a Windows EC2 instance with TSK/Autopsy, Volatility Workstation, Wireshark, and CFF Explorer
+
+
 # Per AWS Labs:  
 
 ## Overview of the Framework
@@ -175,9 +181,5 @@ To do this, go to each member account, find the “IRAutiomation” IAM role:
 Once you have done that you can trigger responses on EC2 events by using the actions dropdown in SecurityHub as shown above.
 
 
-## Future Roadmap
-- Support for Windows
-- Support for ARM based AMIs 
-- Better way of generating memory modules automatically without having to recreate the CloudFormation stack
 
 
